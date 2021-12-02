@@ -4,6 +4,8 @@ Advantages: efficient insertion/removal of elements from any position in the seq
 
 Disadvantages:  access time is linear (and difficult to pipeline). Arrays have better cache locality as compared to linked lists.
 
+![Linked List](https://upload.wikimedia.org/wikipedia/commons/6/6d/Singly-linked-list.svg)
+
 ## Pseudocode for Basic Operations
 
 ### Insert
