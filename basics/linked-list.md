@@ -4,19 +4,14 @@ Advantages: efficient insertion/removal of elements from any position in the seq
 
 Disadvantages:  access time is linear (and difficult to pipeline). Arrays have better cache locality as compared to linked lists.
 
-Time Complexity
-Access	  Search	 Insertion	  Deletion
-  O(n)	   O(n)	      O(1)	      O(n)
-
-Space Complexity
-    O(n)
-
 ## Pseudocode for Basic Operations
 
 ### Insert
 
 ```text
-add(value) --- value is the value to add to the list --> value has been placed at the tail of the list
+add(value)
+--- value is the value to add to the list -->
+value has been placed at the tail of the list ---
   n = node(value)
   if head === ø
     head = n
@@ -27,7 +22,8 @@ add(value) --- value is the value to add to the list --> value has been placed a
 ```
 
 ```text
-prepend(value) --- value is the value to add to the list --> value has been placed at the head of the list
+prepend(value) --- value is the value to add to the list -->
+ value has been placed at the head of the list ---
  n = node(value)
  n.next = head
  head = n
@@ -38,7 +34,9 @@ prepend(value) --- value is the value to add to the list --> value has been plac
 ### Search
 
 ```text
-contains(head, value) --- head is the head node in the list value is the value to search for -> the item is either in the ll, true; otherwise false
+contains(head, value)
+--- head is the head node in the list value is the value to search for ->
+the item is either in the ll, true; otherwise false ---
   n = head
   while n !== ø && n.value !== value
     n = n.next
@@ -50,7 +48,9 @@ contains(head, value) --- head is the head node in the list value is the value t
 ### Delete
 
 ```text
-remove(head, value) --- head is the head node in the list value is the value to remove from the list -> value is removed from the list, true, otherwise false
+remove(head, value)
+--- head is the head node in the list value is the value to remove from the list ->
+ value is removed from the list, true, otherwise false ---
   if head === ø
     return false
   n = head
@@ -76,7 +76,8 @@ remove(head, value) --- head is the head node in the list value is the value to 
 ### Traverse
 
 ```text
-traverse(head) --- head is the head node in the list -> the items in the list have been traversed
+traverse(head)
+--- head is the head node in the list -> the items in the list have been traversed ---
   n = head
   while n !== ø
     yield n.value
@@ -86,7 +87,9 @@ traverse(head) --- head is the head node in the list -> the items in the list ha
 ### Traverse in Reverse
 
 ```text
-reverseTraversal(head, tail) --- head and tail belong to the same list -> the items in the list have been traversed in reverse order
+reverseTraversal(head, tail)
+--- head and tail belong to the same list ->
+ the items in the list have been traversed in reverse order ---
   if tail !== ø
     curr = tail
     while curr !== head
