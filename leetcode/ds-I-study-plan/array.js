@@ -240,3 +240,7 @@ var preorderTraversal = function (root) {
 	}
 	return result
 }
+
+
+// let a = 3
+// console.log(a^=1)
